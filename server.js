@@ -57,6 +57,10 @@ const config = {
 app.use(express.json());
 app.use(cors());
 
+app.get("/hello", async (req, res) => {
+  return res.json("hello");
+});
+
 app.get("/getAccessToken", async (req, res) => {
   const params =
     "?client_id=" +
